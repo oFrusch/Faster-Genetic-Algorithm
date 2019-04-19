@@ -31,6 +31,7 @@ func generate_population(pop Population) Population {
 
 func generate_mating_pool(pop Population) Population {
 	max_fit := 0.0
+	pop.mating_pool = nil
 
 	for i := 0; i < len(pop.population); i++ {
 		if max_fit < pop.population[i].fitness {
